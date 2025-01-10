@@ -19,7 +19,7 @@ import { useMediaQuery } from '@/hooks/use-media-query';
 const menuItems = [
 	{ icon: LayoutDashboard, label: 'Dashboard', href: '/' },
 	{ icon: FileArchiveIcon, label: 'Files Processing', href: '/files' },
-	{ icon: MapIcon, label: 'Variable Mapping', href: '/mapping' },
+	{ icon: MapIcon, label: 'Variables Mapping', href: '/mapping' },
 	{ icon: BarChart3, label: 'Analytics', href: '/analytics' },
 	{ icon: Users, label: 'Users', href: '/users' },
 	{ icon: Settings, label: 'Settings', href: '/settings' },
