@@ -1,17 +1,52 @@
-export default function SettingsPage() {
-  return (
-    <main className="flex-1 p-6">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
-        <p className="text-muted-foreground">Manage your account settings.</p>
-      </div>
+'use client';
 
-      <div className="grid gap-6">
-        {/* Add your settings content here */}
-        <div className="rounded-xl border bg-card p-6">
-          <p className="text-muted-foreground">Settings content will go here.</p>
-        </div>
-      </div>
-    </main>
-  );
+import { Button } from '@/components/ui/button';
+import { Construction, Home } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function SettingsPage() {
+	return (
+		<main className='flex-1 p-6'>
+			<div className='min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center px-4'>
+				<div className='max-w-md w-full text-center'>
+					<motion.div
+						initial={{ scale: 0 }}
+						animate={{ scale: 1 }}
+						transition={{ duration: 0.5 }}
+						className='mb-8'
+					>
+						<Construction className='h-24 w-24 text-primary mx-auto' />
+					</motion.div>
+
+					<motion.div
+						initial={{ y: 20, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.2 }}
+					>
+						<h1 className='text-6xl font-bold text-gray-900 dark:text-white mb-4'>
+							404
+						</h1>
+						<h2 className='text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4'>
+							Página ainda em desenvolvimento
+						</h2>
+						<p className='text-gray-600 dark:text-gray-400 mb-8'>
+							Desculpe, a página que você está procurando nao existe ou ainda
+							não foi construída ou está em reforma.
+						</p>
+
+						<Link href='/'>
+							<Button
+								size='lg'
+								className='bg-[#003566] hover:bg-[#001d3d] text-white inline-flex items-center gap-2'
+							>
+								<Home className='h-4 w-4' />
+								Voltar ao Início
+							</Button>
+						</Link>
+					</motion.div>
+				</div>
+			</div>
+		</main>
+	);
 }

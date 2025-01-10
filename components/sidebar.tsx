@@ -12,6 +12,7 @@ import {
 	BarChart3,
 	FileArchiveIcon,
 	MapIcon,
+	UploadIcon,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useMediaQuery } from '@/hooks/use-media-query';
@@ -21,6 +22,7 @@ const menuItems = [
 	{ icon: FileArchiveIcon, label: 'Files Processing', href: '/files' },
 	{ icon: MapIcon, label: 'Variables Mapping', href: '/mapping' },
 	{ icon: BarChart3, label: 'Analytics', href: '/analytics' },
+	{ icon: UploadIcon, label: 'Upload', href: '/upload' },
 	{ icon: Users, label: 'Users', href: '/users' },
 	{ icon: Settings, label: 'Settings', href: '/settings' },
 ];
